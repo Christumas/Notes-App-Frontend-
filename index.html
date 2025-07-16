@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="heading" alt="Notes">Notes</h1>
+        <div class="btn-container">
+            <button class="add-note-btn" onclick="openNoteBox()"> + Add Note</button>
+            <div class="dropdownThemeBox">
+                <button class="theme-btn" onclick="toggleDropDown()">Theme</button>
+                <ul class="dropdownMenu">
+                    <li><a href="">Spring</a></li>
+                    <li><a href="">Summer</a></li>
+                    <li><a href="">Autumn</a></li>
+                    <li><a href="">Winter</a></li>
+                    <li><a href="">Light(default)</a></li>
+                    <li><a href="">Dark</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="notesGrid" id="notesContainer">
+
+    </main>
+
+
+    <dialog id="noteDialog">
+        <div class="dialogBox">
+            
+            <!-- the header -->
+            <div class="dialogHeader">
+                <h3>Add New Note</h3>
+                <button class="closeButton" onclick="closeDialogBox()">X</button>
+            </div>
+
+            <form>
+                 <!-- Title and input section -->
+                <div class="form-group">
+                    <label for="titleDefinition" class="formLabel">Title</label>
+                    <input type="text" name="noteTitle" id="noteTitleEnter" placeholder="Enter your note title here.." required>
+                </div>
+                  
+                <!-- note content form -->
+                <div class="form-group">
+                    <label for="noteContent" class="formLabel">Content</label>
+                    <textarea name="noteContent" id="noteContentEnter" placeholder="Write your notes here..." required></textarea>
+                </div>
+
+                <div class="dialogActions">
+                    <button type="button" class="dialogCancelBtn" onclick="closeDialogBox()">Cancel</button>
+                    <button type= "submit" class="saveNoteBtn">Save Note</button>
+                </div>
+            </form>
+
+        </div>
+    </dialog>
+    
+    <script src="index.js"></script>
+</body>
+</html>

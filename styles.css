@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+:root{
+    --color-background : #FFFCFB;
+    --color-surface: #ED3500;
+    --color-text-primary: #093FB4;
+    --color-text-secondary: #FFD8D8;
+}
+
+.spring-theme{
+    --color-background : #A2C579;
+    --color-surface: #FFFFDD;
+    --color-text-primary: #61A3BA;
+    --color-text-secondary: #D2DE32;
+}
+
+.summer-theme{
+    --color-background : #FADA7A;
+    --color-surface: #F5F0CD;
+    --color-text-primary: #3674B5;
+    --color-text-secondary: #578FCA;
+}
+
+.autumn-theme{
+    --color-background : #CD5C08;
+    --color-surface: #F5E8B7;
+    --color-text-primary: #6A9C89;
+    --color-text-secondary: #C1D8C3;
+}
+
+.winter-theme{
+    --color-background : #201E43;
+    --color-surface: #EEEEEE;
+    --color-text-primary: #134B70;
+    --color-text-secondary: #508C9B;
+}
+
+.dark-theme{
+    --color-background : #070F2B;
+    --color-surface: #1B1A55;
+    --color-text-primary: #F1F0E8;
+    --color-text-secondary: #535C91;
+}
+
+button, input, textarea{
+    font-family: inherit;
+    color: inherit;
+}
+
+
+body{
+    font-family: monospace;
+    margin:3rem;
+    background: var(--color-background);
+    color: var(--color-text-primary)
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.heading{
+    font-size: 2rem;
+}
+
+.dropdownThemeBox{
+    position: relative;
+    display: inline-block;
+}
+.dropdownMenu{
+    position: absolute;
+    margin-top: 0.5rem;
+    list-style-type: none;
+    background: var(--color-text-secondary);
+    top:100%;
+    left:-150%;
+    padding:1rem;
+    line-height: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 1px 5px;
+    display: none;
+
+}
+
+.dropdownMenu a{
+    text-decoration: none;
+    color:var(--color-text-primary)
+}
+
+.dropdownMenu a:hover{
+    background: var(--color-background);
+}
+
+/* for the dropdown menu */
+.dropdownMenu.active{ 
+    display: block;
+}
+
+
+.theme-btn, .add-note-btn{
+    background: var(--color-text-secondary);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0px 1px 4px;
+    cursor:pointer;
+}
+
+.add-note-btn:hover, .theme-btn:hover{
+    background-color: var(--color-surface);
+}
+
+.notesGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+
+#noteDialog{
+    background:var(--color-background);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px var(--color-background);
+    font-family: inherit;
+    padding:2rem;
+    margin:auto; /* Super important to ensure that the dialogbox sticks to its native behaviour and centers itself*/
+}
+
+.dialogBox{
+    width:50vw;
+    height:50vh;
+    background: var(--color-background);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.dialogHeader{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.dialogHeader h3{
+    color: var(--color-text-primary);
+}
+
+.closeButton{
+    background: var(--color-text-secondary);
+    color:var(--color-text-primary);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0px 1px 4px;
+    cursor:pointer;
+}
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:2rem;
+}
+
+.formLabel{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+}
+
+.dialogActions{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap:1rem;
+}
+
+.dialogCancelBtn, .saveNoteBtn{
+    background: var(--color-text-secondary);
+    color:var(--color-text-primary);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0px 1px 4px;
+    cursor:pointer;
+}
+
+.closeButton:hover, .dialogCancelBtn:hover, .saveNoteBtn:hover{
+    background: var(--color-surface);
+}
+
+#noteTitleEnter, #noteContentEnter{
+    border: none;
+    border-radius: 15px;
+    padding:0.5rem;
+    resize: vertical;
+
+}
