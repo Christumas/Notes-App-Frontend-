@@ -1,6 +1,10 @@
 // Dropdown menu
-const dropDown = document.querySelector("")
 
+function toggleDropDown(){
+    const dropDown = document.querySelector(".dropdownMenu");
+    dropDown.classList.toggle("active")
+    console.log(dropDown.classList)
+}
 
 
 // create an array for notes
