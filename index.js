@@ -1,3 +1,8 @@
+// Dropdown menu
+const dropDown = document.querySelector("")
+
+
+
 // create an array for notes
 let notes = [];
 

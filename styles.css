@@ -123,13 +123,17 @@ header{
 }
 
 #noteDialog{
-    background:var(--color-background);
     border: none;
+    background: var(--color-background);
     border-radius: 15px;
-    box-shadow: 0px 2px 2px var(--color-background);
+    box-shadow: 0px 2px 4px var(--color-text-primary);
     font-family: inherit;
     padding:2rem;
     margin:auto; /* Super important to ensure that the dialogbox sticks to its native behaviour and centers itself*/
+}
+
+#noteDialog::backdrop{
+    background: transparent
 }
 
 .dialogBox{
@@ -140,6 +144,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding:2rem;
 }
 
 
@@ -201,7 +206,8 @@ header{
 #noteTitleEnter, #noteContentEnter{
     border: none;
     border-radius: 15px;
-    padding:0.5rem;
+    padding:1rem;
     resize: vertical;
+    background: var(--color-text-secondary);
 
 }
