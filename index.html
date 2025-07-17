@@ -14,12 +14,12 @@
             <div class="dropdownThemeBox">
                 <button class="theme-btn" onclick="toggleDropDown()">Theme</button>
                 <ul class="dropdownMenu">
-                    <li><a href="">Spring</a></li>
-                    <li><a href="">Summer</a></li>
-                    <li><a href="">Autumn</a></li>
-                    <li><a href="">Winter</a></li>
-                    <li><a href="">Light(default)</a></li>
-                    <li><a href="">Dark</a></li>
+                    <li><a href="" data-theme="spring-theme">Spring</a></li>
+                    <li><a href="" data-theme="summer-theme" >Summer</a></li>
+                    <li><a href="" data-theme="autumn-theme" >Autumn</a></li>
+                    <li><a href="" data-theme="winter-theme" >Winter</a></li>
+                    <li><a href="" data-theme="light-theme" >Light(default)</a></li>
+                    <li><a href="" data-theme="dark-theme" >Dark</a></li>
                 </ul>
             </div>
             
@@ -36,11 +36,11 @@
             
             <!-- the header -->
             <div class="dialogHeader">
-                <h3>Add New Note</h3>
+                <h3 id="dialogTitle">Add New Note</h3>
                 <button class="closeButton" onclick="closeDialogBox()">X</button>
             </div>
 
-            <form>
+            <form id="noteForm">
                  <!-- Title and input section -->
                 <div class="form-group">
                     <label for="titleDefinition" class="formLabel">Title</label>
