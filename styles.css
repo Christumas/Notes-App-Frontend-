@@ -239,9 +239,12 @@ header{
 .noteHeader{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
-#editNoteBtn, #deleteNoteBtn{
+
+
+#editNoteBtn, #deleteNoteBtn, #pinNoteBtn{
     padding:0.2rem;
     background: var(--color-background);
     border: none;
@@ -252,12 +255,16 @@ header{
 
 .noteCard:hover{
     transform: scale(1.1);
-    #editNoteBtn, #deleteNoteBtn{
+    #editNoteBtn, #deleteNoteBtn, #pinNoteBtn{
         display: inline;
     }
 }
-
-#editNoteBtn:hover, #deleteNoteBtn:hover{
+.noteActions{
+    display: flex;
+    gap:0.2rem;
+    justify-content: flex-end;
+}
+#editNoteBtn:hover, #deleteNoteBtn:hover, #pinNoteBtn:hover{
     background: var(--color-surface);
     transform: scale(1.5);
 }

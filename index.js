@@ -112,6 +112,7 @@ function renderNotes(){
                 <div class="noteActions">
                     <button id="editNoteBtn" onclick="openNoteBox(${note.id})">🖊</button>
                     <button id="deleteNoteBtn" onclick="deleteNote(${note.id})">🗑</button>
+                    <button id="pinNoteBtn" onclick="pinNote(${note.id})">📌</button>
                 </div>
             </div>
             <p id="noteContent">${note["content"]}</p>
@@ -190,5 +191,18 @@ function changeTheme(availableThemes){
         })
         
     });
+
+}
+
+
+function pinNote(noteID){
+    //grab the id of the note
+    //find its index in the array
+    //change it 0 so its the first element
+    //render the notes
+
+    let notetoPin = notes.find(n => n.id == noteID);
+    console.log(notetoPin);
+
 
 }
