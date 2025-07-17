@@ -9,7 +9,7 @@ function toggleDropDown(){
 let editingNoteID = null;
 
 //handles both adding a new note as well as editing an existing note
-function openNoteBox(noteID){
+function openNoteBox(noteID=null){
     const dialogBox = document.querySelector("#noteDialog");
     const titleDescription = document.querySelector("#noteTitleEnter"); //sets the keyboard focus inside the title input section
     const noteContent = document.querySelector("#noteContentEnter");
@@ -17,6 +17,7 @@ function openNoteBox(noteID){
 
     if(noteID){
         editingNoteID = noteID;
+        console.log(editingNoteID)
         const notetoEdit = notes.find(n => n.id == noteID);
         //change note header title to edit note when in edit mode
         noteHeaderTitle.textContent = "Edit your note";  
@@ -54,6 +55,15 @@ function saveNote(event){
     const noteContent = document.querySelector("#noteContentEnter").value.trim();
 
     if(editingNoteID){
+        // //get the note from the array that needs to be edited and updated
+        // //find the node index
+        const noteIndex = notes.findIndex(note => note.id == editingNoteID);
+        console.log(noteIndex);
+        notes[noteIndex] = {
+            ...notes[noteIndex],
+            title: noteTitle,
+            content: noteContent
+        }
 
     }
 
@@ -68,7 +78,7 @@ function saveNote(event){
 
     }
    
-
+    
     saveNotes();
     renderNotes();
     closeDialogBox();
